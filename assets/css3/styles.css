@@ -1,0 +1,750 @@
+body {
+    margin: 0px;
+} 
+
+.conteneur {
+    position: relative;
+    width: 1100px;
+    height: 700px;
+    margin: 0px auto;
+    overflow: hidden;
+}
+
+h1 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: purple;
+    position: absolute;
+    top: 315px;
+    left: 475px;
+    opacity: 100%;
+    animation-name: voila;
+    animation-duration: 25s;
+    animation-timing-function: linear;
+}
+
+@keyframes voila {
+    0% {
+        opacity: 0%;
+    }
+
+    95% {
+        opacity: 0%;
+    }
+    100% {
+        opacity: 100%;
+    }
+}
+
+/* ------------------------------------------------------------------------ */
+
+
+/* DEBUT COTE DROIT  */
+
+.cote-droit {
+    position: absolute;
+    top: -700px;
+    /* top: 0px; */
+    left: 0px;
+    animation-name: montee;
+    animation-duration: 10s;
+    animation-timing-function: linear;
+}
+
+.cote-gauche {
+    position: absolute;
+    top: -700px;
+    /* top: 0px; */
+    right: 0px;
+    animation-name: montee;
+    animation-duration: 10s;
+    animation-timing-function: linear;
+    transform: rotateY(180deg);
+}
+
+@keyframes montee {
+    0%{
+        top: 100px;
+    }
+    100%{
+        top: -700px;
+    }
+}
+
+.cote-droit .vase,
+.cote-gauche .vase{
+    background-image: url("../../images/vases.png");
+    height: 125px;
+    width: 100px;
+    position: absolute;
+    top: 50px;
+    left: -10px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    transform: rotate(60deg);
+}
+
+.cote-droit .rond,
+.cote-gauche .rond{
+    background-color: rgba(0, 153, 255, 0.3) ;
+    height: 50px;
+    width: 50px;
+    border-radius: 50px;
+    position: absolute;
+    top: 60px;
+    left: 75px;
+}
+
+.cote-droit .rectangle,
+.cote-gauche .rectangle{
+    background-color: rgba(0, 153, 255, 0.3);
+    height: 600px;
+    width: 50px;
+    position: absolute;
+    top: 90px;
+    left: 75px;
+}
+
+.cote-droit .ligneB1,
+.cote-gauche .ligneB1{
+    background-color: white;
+    height: 100px;
+    width: 5px;
+    position: absolute;
+    top: 700px;
+    left: 115px;
+    animation-name: ligneB;
+    animation-duration: 3s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+.cote-droit .ligneB2,
+.cote-gauche .ligneB2 {
+    background-color: white;
+    height: 100px;
+    width: 5px;
+    position: absolute;
+    top: 700px;
+    left: 100px;
+    animation-name: ligneB;
+    animation-duration: 3s;
+    animation-delay: 1.5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+.cote-droit .ligneB3,
+.cote-gauche .ligneB3{
+    background-color: white;
+    height: 100px;
+    width: 5px;
+    position: absolute;
+    top: 700px;
+    left: 85px;
+    animation-name: ligneB;
+    animation-duration: 3s;
+    animation-delay: 1s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+@keyframes ligneB {
+    0% {
+        top: 105px;
+    }
+    100% {
+        top: 600px;
+    }
+}
+
+.cote-droit .bulle1,
+.cote-gauche .bulle1{
+    background-color: white ;
+    height: 15px;
+    width: 15px;
+    border-radius: 100px;
+    position: absolute;
+    top: 680px;
+    left: 70px;
+    transform: perspective(100px) translateZ(-10px);
+    animation-name: bulle;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+.cote-droit .bulle2,
+.cote-gauche .bulle2{
+    background-color: white ;
+    height: 15px;
+    width: 15px;
+    border-radius: 100px;
+    position: absolute;
+    top: 680px;
+    left: 93px;
+    transform: perspective(100px) translateZ(-10px);
+    animation-name: bulle;
+    animation-duration: 2s;
+    animation-delay: 1s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+.cote-droit .bulle3,
+.cote-gauche .bulle3{
+    background-color: white ;
+    height: 15px;
+    width: 15px;
+    border-radius: 100px;
+    position: absolute;
+    top: 680px;
+    left: 117px;
+    transform: perspective(100px) translateZ(-10px);
+    animation-name: bulle;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+@keyframes bulle{
+    0%{
+        transform: perspective(100px) translateZ(-10px);
+    }
+    100% {
+        transform: perspective(100px) translateZ(50px);
+    }
+}
+/* -------------------------------------------------------------- */
+
+
+/* DEBUT DE LA BOITE DE CHARGEMENT  */
+.boite-chargement {
+    border: 3px solid black;
+    background-color: white;
+    border-radius: 3px;
+    height: 10%;
+    width: 25%;
+    position: absolute;
+    top: 45%;
+    left: 35%;
+}
+
+
+.chargement{
+    height: 100%;
+    width: 100%;
+    background-color: lightgreen;
+    animation-name: chargement;
+    animation-duration: 10s;
+    animation-timing-function: linear;
+}
+
+
+@keyframes chargement {
+    0%{
+        width: 0%;
+    }
+    
+    100%{
+        width: 100%;
+    }
+}
+/* FIN DE LA BOITE DE CHARGEMENT  */
+
+/* ----------------------------------------------------------------- */
+/* DEBUT ; EAU ET VAGUE  */
+.eau {
+    background-color: rgba(0, 153, 255, 0.3);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0px;
+    bottom: 0px; 
+    animation-name: eau;
+    animation-duration: 10s;
+    animation-timing-function: linear;
+}
+
+@keyframes eau {
+    0% {
+        height: 0%;
+    }
+
+    100%{
+        height: 100%;
+    }
+}
+
+
+.vague {
+    width: 100%;
+    height: 100px;
+    position: absolute;
+    left: 0px;
+    bottom: 100%;
+    animation-name: vague;
+    animation-duration: 10s;
+    animation-timing-function: linear;
+} 
+
+
+@keyframes vague {
+    0% {
+        bottom: 0%;
+    }
+
+    100%{
+        bottom: 100%;
+    }
+}
+/* FIN ; EAU ET VAGUE  */
+
+
+/* ------------------------------------------------------------------------------------- */
+
+/* DEBUT DE ; POSTION, PERSPECTIVE ET MOUVEMENT DES POISSONS */
+.poisson1 {
+    position: absolute;
+    top: 250px;
+    left: -200px;
+    animation-name: poisson-g1;
+    animation-delay: 12s;
+    animation-timing-function: linear;
+    animation-duration: 10s;
+    transform: perspective(100px) translateZ(-30px);
+}
+.poisson2 {
+    position: absolute;
+    top: 50px;
+    left: -200px;
+    animation-name: poisson-g1;
+    animation-delay: 14s;
+    animation-timing-function: linear;
+    animation-duration: 10s;
+    transform: perspective(100px) translateZ(-10px);
+}
+.poisson3 {
+    position: absolute;
+    top: 500px;
+    left: -200px;
+    animation-name: poisson-g1;
+    animation-delay: 10s;
+    animation-timing-function: linear;
+    animation-duration: 10s;
+    transform: perspective(100px) translateZ(10px);
+}
+.poisson4 {
+    position: absolute;
+    top: 250px;
+    right: -200px;
+    animation-name: poisson-g2;
+    animation-delay: 15s;
+    animation-timing-function: linear;
+    animation-duration: 10s;
+    transform: perspective(100px) translateZ(0px) rotateY(180deg);
+}
+.poisson5 {
+    position: absolute;
+    top: -75px;
+    right: -200px;
+    animation-name: poisson-g2;
+    animation-delay: 11s;
+    animation-timing-function: linear;
+    animation-duration: 10s;
+    transform: perspective(100px) translateZ(-10px) rotateY(180deg);
+}
+.poisson6 {
+    position: absolute;
+    top: 450px;
+    right: -200px;
+    animation-name: poisson-g2;
+    animation-delay: 13s;
+    animation-timing-function: linear;
+    animation-duration: 10s;
+    transform: perspective(100px) translateZ(-40px) rotateY(180deg);
+}
+
+
+@keyframes poisson-g1{
+    0% {
+        left: -200px;
+    }
+
+    100% {
+        left: 1200px;
+    }
+}
+@keyframes poisson-g2{
+    0% {
+        right: -200px;
+    }
+
+    100% {
+        right: 1200px;
+    }
+}
+/* FIN DE ; POSITION, PERSPECTIVE ET MOUVEMENT DES POISSONS */
+
+/* ---------------------------------------------------------------------------- */
+
+/* DEBUT DE LA CONSTRUCTION DES POISSONS */
+.poisson1 .tete, 
+.poisson2 .tete,
+.poisson3 .tete,
+.poisson4 .tete,
+.poisson5 .tete,
+.poisson6 .tete{
+    background-color: coral;
+    height: 40px;
+    width: 60px;
+    border-top-right-radius: 25px;
+    border-bottom-right-radius: 25px;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+    position: absolute;
+    top: 105px;
+    left: 85px;
+}
+
+.poisson1 .oeil,
+.poisson2 .oeil,
+.poisson3 .oeil,
+.poisson4 .oeil,
+.poisson5 .oeil,
+.poisson6 .oeil{
+    background-color: black;
+    height: 10px;
+    width: 10px;
+    border-radius: 10px;
+    position: absolute;
+    top: 113px;
+    left: 125px;
+}
+
+.poisson1 .bouche,
+.poisson2 .bouche,
+.poisson3 .bouche,
+.poisson4 .bouche,
+.poisson5 .bouche,
+.poisson6 .bouche{
+    background-color: black;
+    height: 2px;
+    width: 50px;
+    position: absolute;
+    top: 132px;
+    left: 109px;
+    transform: perspective(100px) rotateY(63deg);
+}
+
+.poisson1 .queue, 
+.poisson2 .queue,
+.poisson3 .queue,
+.poisson4 .queue,
+.poisson5 .queue,
+.poisson6 .queue{
+    background-color: coral;
+    height: 50px;
+    width: 50px;
+    position: absolute;
+    top: 100px;
+    left: 70px;
+    transform: perspective(100px) rotateY(63deg);
+}
+
+.poisson1 .ligne1,
+.poisson2 .ligne1,
+.poisson3 .ligne1,
+.poisson4 .ligne1,
+.poisson5 .ligne1,
+.poisson6 .ligne1{
+    background-color: black;
+    height: 2px;
+    width: 50px;
+    position: absolute;
+    top: 115px;
+    left: 70px;
+    transform: perspective(100px) rotateY(63deg);
+}
+.poisson1 .ligne2,
+.poisson2 .ligne2,
+.poisson3 .ligne2,
+.poisson4 .ligne2,
+.poisson5 .ligne2,
+.poisson6 .ligne2{
+    background-color: black;
+    height: 2px;
+    width: 50px;
+    position: absolute;
+    top: 125px;
+    left: 70px;
+    transform: perspective(100px) rotateY(63deg);
+}
+.poisson1 .ligne3,
+.poisson2 .ligne3,
+.poisson3 .ligne3,
+.poisson4 .ligne3,
+.poisson5 .ligne3,
+.poisson6 .ligne3{
+    background-color: black;
+    height: 2px;
+    width: 50px;
+    position: absolute;
+    top: 135px;
+    left: 70px;
+    transform: perspective(100px) rotateY(63deg);
+}
+/* FIN DE LA CONSTRUCTION DES POISSONS */
+
+/* ------------------------------------------------------------------- */
+
+
+.conteneur-bulles {
+    animation-name: bulles;
+    animation-duration: 25s;
+    animation-timing-function: linear;
+    opacity: 100%;
+}
+
+@keyframes bulles {
+    0% {
+        opacity: 0%;
+    }
+    95% {
+        opacity: 0%;
+    }
+    100%{
+        opacity: 100%;
+    }
+}
+
+
+
+/* DÉBUT DU CODE TROUVÉ SUR INTERNET  */
+
+/* KEYFRAMES */
+
+@-webkit-keyframes animateBubble {
+    0% {
+        margin-top: 1000px;
+    }
+    100% {
+        margin-top: -100%;
+    }
+}
+
+@-moz-keyframes animateBubble {
+    0% {
+        margin-top: 1000px;
+    }
+    100% {
+        margin-top: -100%;
+    }
+}
+
+@keyframes animateBubble {
+    0% {
+        margin-top: 1000px;
+    }
+    100% {
+        margin-top: -100%;
+    }
+}
+
+@-webkit-keyframes sideWays { 
+    0% { 
+        margin-left:0px;
+    }
+    100% { 
+        margin-left:50px;
+    }
+}
+
+@-moz-keyframes sideWays { 
+    0% { 
+        margin-left:0px;
+    }
+    100% { 
+        margin-left:50px;
+    }
+}
+
+@keyframes sideWays { 
+    0% { 
+        margin-left:0px;
+    }
+    100% { 
+        margin-left:50px;
+    }
+}
+
+/* ANIMATIONS */
+
+.x1 {
+    -webkit-animation: animateBubble 25s linear infinite, sideWays 2s ease-in-out infinite alternate;
+	-moz-animation: animateBubble 25s linear infinite, sideWays 2s ease-in-out infinite alternate;
+	animation: animateBubble 25s linear infinite, sideWays 2s ease-in-out infinite alternate;
+	
+	left: -5%;
+	top: 5%;
+	
+	-webkit-transform: scale(0.6);
+	-moz-transform: scale(0.6);
+	transform: scale(0.6);
+}
+
+.x2 {
+    -webkit-animation: animateBubble 20s linear infinite, sideWays 4s ease-in-out infinite alternate;
+	-moz-animation: animateBubble 20s linear infinite, sideWays 4s ease-in-out infinite alternate;
+	animation: animateBubble 20s linear infinite, sideWays 4s ease-in-out infinite alternate;
+	
+	left: 5%;
+	top: 80%;
+	
+	-webkit-transform: scale(0.4);
+	-moz-transform: scale(0.4);
+	transform: scale(0.4);
+}
+
+.x3 {
+    -webkit-animation: animateBubble 28s linear infinite, sideWays 2s ease-in-out infinite alternate;
+	-moz-animation: animateBubble 28s linear infinite, sideWays 2s ease-in-out infinite alternate;
+	animation: animateBubble 28s linear infinite, sideWays 2s ease-in-out infinite alternate;
+	
+	left: 10%;
+	top: 40%;
+	
+	-webkit-transform: scale(0.7);
+	-moz-transform: scale(0.7);
+	transform: scale(0.7);
+}
+
+.x4 {
+    -webkit-animation: animateBubble 22s linear infinite, sideWays 3s ease-in-out infinite alternate;
+	-moz-animation: animateBubble 22s linear infinite, sideWays 3s ease-in-out infinite alternate;
+	animation: animateBubble 22s linear infinite, sideWays 3s ease-in-out infinite alternate;
+	
+	left: 20%;
+	top: 0;
+	
+	-webkit-transform: scale(0.3);
+	-moz-transform: scale(0.3);
+	transform: scale(0.3);
+}
+
+.x5 {
+    -webkit-animation: animateBubble 29s linear infinite, sideWays 4s ease-in-out infinite alternate;
+	-moz-animation: animateBubble 29s linear infinite, sideWays 4s ease-in-out infinite alternate;
+	animation: animateBubble 29s linear infinite, sideWays 4s ease-in-out infinite alternate;
+	
+	left: 30%;
+	top: 50%;
+	
+	-webkit-transform: scale(0.5);
+	-moz-transform: scale(0.5);
+	transform: scale(0.5);
+}
+
+.x6 {
+    -webkit-animation: animateBubble 21s linear infinite, sideWays 2s ease-in-out infinite alternate;
+	-moz-animation: animateBubble 21s linear infinite, sideWays 2s ease-in-out infinite alternate;
+	animation: animateBubble 21s linear infinite, sideWays 2s ease-in-out infinite alternate;
+	
+	left: 50%;
+	top: 0;
+	
+	-webkit-transform: scale(0.8);
+	-moz-transform: scale(0.8);
+	transform: scale(0.8);
+}
+
+.x7 {
+    -webkit-animation: animateBubble 20s linear infinite, sideWays 2s ease-in-out infinite alternate;
+	-moz-animation: animateBubble 20s linear infinite, sideWays 2s ease-in-out infinite alternate;
+	animation: animateBubble 20s linear infinite, sideWays 2s ease-in-out infinite alternate;
+	
+	left: 65%;
+	top: 70%;
+	
+	-webkit-transform: scale(0.4);
+	-moz-transform: scale(0.4);
+	transform: scale(0.4);
+}
+
+.x8 {
+    -webkit-animation: animateBubble 22s linear infinite, sideWays 3s ease-in-out infinite alternate;
+	-moz-animation: animateBubble 22s linear infinite, sideWays 3s ease-in-out infinite alternate;
+	animation: animateBubble 22s linear infinite, sideWays 3s ease-in-out infinite alternate;
+	
+	left: 80%;
+	top: 10%;
+	
+	-webkit-transform: scale(0.3);
+	-moz-transform: scale(0.3);
+	transform: scale(0.3);
+}
+
+.x9 {
+    -webkit-animation: animateBubble 29s linear infinite, sideWays 4s ease-in-out infinite alternate;
+	-moz-animation: animateBubble 29s linear infinite, sideWays 4s ease-in-out infinite alternate;
+	animation: animateBubble 29s linear infinite, sideWays 4s ease-in-out infinite alternate;
+	
+	left: 90%;
+	top: 50%;
+	
+	-webkit-transform: scale(0.6);
+	-moz-transform: scale(0.6);
+	transform: scale(0.6);
+}
+
+.x10 {
+    -webkit-animation: animateBubble 26s linear infinite, sideWays 2s ease-in-out infinite alternate;
+	-moz-animation: animateBubble 26s linear infinite, sideWays 2s ease-in-out infinite alternate;
+	animation: animateBubble 26s linear infinite, sideWays 2s ease-in-out infinite alternate;
+	
+	left: 80%;
+	top: 80%;
+	
+	-webkit-transform: scale(0.3);
+	-moz-transform: scale(0.3);
+	transform: scale(0.3);
+}
+
+/* OBJECTS */
+
+.bubble {
+    -webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+	border-radius: 50%;
+	
+    -webkit-box-shadow: 0 20px 30px rgba(0, 0, 0, 0.2), inset 0px 10px 30px 5px rgba(255, 255, 255, 1);
+	-moz-box-shadow: 0 20px 30px rgba(0, 0, 0, 0.2), inset 0px 10px 30px 5px rgba(255, 255, 255, 1);
+	box-shadow: 0 20px 30px rgba(0, 0, 0, 0.2), inset 0px 10px 30px 5px rgba(255, 255, 255, 1);
+	
+    height: 200px;
+	position: absolute;
+	width: 200px;
+}
+
+.bubble:after {
+    background: -moz-radial-gradient(center, ellipse cover,  rgba(255,255,255,0.5) 0%, rgba(255,255,255,0) 70%); /* FF3.6+ */
+    background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,rgba(255,255,255,0.5)), color-stop(70%,rgba(255,255,255,0))); /* Chrome,Safari4+ */
+    background: -webkit-radial-gradient(center, ellipse cover,  rgba(255,255,255,0.5) 0%,rgba(255,255,255,0) 70%); /* Chrome10+,Safari5.1+ */
+    background: -o-radial-gradient(center, ellipse cover,  rgba(255,255,255,0.5) 0%,rgba(255,255,255,0) 70%); /* Opera 12+ */
+    background: -ms-radial-gradient(center, ellipse cover,  rgba(255,255,255,0.5) 0%,rgba(255,255,255,0) 70%); /* IE10+ */
+    background: radial-gradient(ellipse at center,  rgba(255,255,255,0.5) 0%,rgba(255,255,255,0) 70%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#80ffffff', endColorstr='#00ffffff',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+	border-radius: 50%;
+	
+    -webkit-box-shadow: inset 0 20px 30px rgba(255, 255, 255, 0.3);
+	-moz-box-shadow: inset 0 20px 30px rgba(255, 255, 255, 0.3);
+	box-shadow: inset 0 20px 30px rgba(255, 255, 255, 0.3);
+	
+	content: "";
+    height: 180px;
+	left: 10px;
+	position: absolute;
+	width: 180px;
+}
+
+/* FIN DU CODE TROUVÉ SUR INTERNET  */
