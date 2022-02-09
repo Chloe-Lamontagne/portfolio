@@ -1,0 +1,17 @@
+<main>
+    <div id="nom">
+        <div class="bloc1">Titre</div>
+        <div class="bloc2">Artiste</div>
+        <div class="bloc3">Temps</div>
+    </div>
+    <div id="choix_musique"
+    v-for="index of musique.filter(filtrerMusique)"
+    @click="$root.choisir_musique(index.audio, index.image, index.titre, index.temps, index.tags)"
+    >
+        <div class="bloc1">{{index.titre}}</div>
+        <div class="bloc2">{{index.artiste}}</div>
+        <div class="bloc3">
+            {{Math.floor(index.temps / 60)}} min, {{index.temps % 60}} sec
+        </div>
+    </div>
+</main>

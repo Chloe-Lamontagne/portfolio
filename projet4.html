@@ -9,8 +9,10 @@
 		<title>Projet 4</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<link rel="stylesheet" href="assets/base_css/main.css" />
+		<link rel="icon" href="data:;base64,iVBORw0KGgo=">
+		<noscript><link rel="stylesheet" href="assets/base_css/noscript.css" /></noscript>
+		<link rel="stylesheet" href="assets/projet_css/css4/styles.css">
 	</head>
 
     <body class="is-preload">
@@ -26,8 +28,8 @@
 			<nav id="nav">
 				<ul class="links">
 					<li><a href="index.html">Mes travaux</a></li>
-					<li><a href="generic.html">À propos</a></li>
-					<li><a href="elements.html">Mes Outils</a></li>
+					<li><a href="infos.html">À propos</a></li>
+					<li><a href="outils.html">Mes Outils</a></li>
 				</ul>
 				<ul class="icons">
 					<li><a href="#" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
@@ -39,18 +41,78 @@
 					<!-- Post -->
 						<section class="post">
 							<header class="major">
-								<span class="date">April 25, 2017</span>
-								<h1>This is a<br />
-								Generic Page</h1>
-								<p>Aenean ornare velit lacus varius enim ullamcorper proin aliquam<br />
-								facilisis ante sed etiam magna interdum congue. Lorem ipsum dolor<br />
-								amet nullam sed etiam veroeros.</p>
-							</header>
-							<div class="image main"><img src="images/pic01.jpg" alt="" /></div>
-							<p>Donec eget ex magna. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque venenatis dolor imperdiet dolor mattis sagittis. Praesent rutrum sem diam, vitae egestas enim auctor sit amet. Pellentesque leo mauris, consectetur id ipsum sit amet, fergiat. Pellentesque in mi eu massa lacinia malesuada et a elit. Donec urna ex, lacinia in purus ac, pretium pulvinar mauris. Nunc lorem mauris, fringilla in aliquam at, euismod in lectus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Curabitur sapien risus, commodo eget turpis at, elementum convallis enim turpis, lorem ipsum dolor sit amet nullam.</p>
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis dapibus rutrum facilisis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Etiam tristique libero eu nibh porttitor fermentum. Nullam venenatis erat id vehicula viverra. Nunc ultrices eros ut ultricies condimentum. Mauris risus lacus, blandit sit amet venenatis non, bibendum vitae dolor. Nunc lorem mauris, fringilla in aliquam at, euismod in lectus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. In non lorem sit amet elit placerat maximus. Pellentesque aliquam maximus risus. Donec eget ex magna. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque venenatis dolor imperdiet dolor mattis sagittis. Praesent rutrum sem diam, vitae egestas enim auctor sit amet. Pellentesque leo mauris, consectetur id ipsum.</p>
+								<span class="date">Janvier 2022</span>
+								<h1>Projet 4<br />
+									View.js</h1>
+								<p>Dans ce projet, nous avons appris à utiliser view.js.</p>
+							</header>							
 						</section>
+						<section id="projet4">
+							
+							<div id="app">
+
+								<accueil v-if="page == 'accueil'"></accueil>
+					
+								<div class="musique" v-if="page == 'musique'">
+					
+									<div class="bt-retour bt-retour1" @click="changer_page('accueil')">
+										<p>Page initiale</p>
+									</div>
+					
+									<div class="conteneur">
+									
+										<!-- HEADER -->
+										<header>
+											<input type="text" name="recherche" placeholder="Recherche" v-model="recherche">
+										</header>
+										<!-- MAIN -->
+										<div class="list">
+											<liste @choix="choisir_musique" :filtre="recherche"></liste>
+										</div>
+										<!-- FOOTER -->
+										<commande
+										:choix = "choix_musique"
+										:image="choix_image"
+										:titre= "choix_titre"
+										:temps="temps_musique">
+										</commande>
+										<tags :tags="tags"></tags>
+									</div>
+									
+					
+									<!-- <div class="bt-retour bt-retour2" @click="changer_page('accueil')">
+										<p>Page initiale</p>
+									</div> -->
+								</div>
+					
+							</div>
+						</section>
+
 				</div>
+				<!-- Footer -->
+				<footer id="footer">
+					<section class="split contact">
+						<!-- <section class="alt">
+							<h3>Address</h3>
+							<p>Quelque part dans les Laurentides</p>
+						</section>
+						<section>
+							<h3>Phone</h3>
+							<p><a href="#">(438) 354-6040</a></p>
+						</section> -->
+						<section>
+							<h3>Email</h3>
+							<p>chloemasso9@gmail.com</p>
+						</section>
+						<section>
+							<h3>Social</h3>
+							<ul class="icons alt">
+								<li><a href="https://github.com/Chloe-Lamontagne" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
+							</ul>
+						</section>
+					</section>
+				</footer>
+
         </div>
 
 
@@ -63,6 +125,9 @@
 		<script src="assets/js/breakpoints.min.js"></script>
 		<script src="assets/js/util.js"></script>
 		<script src="assets/js/main.js"></script>
+
+		<script src="https://unpkg.com/vue@next"></script>
+        <script src="assets/projet-js/projet4-js/main.js" type="module"></script>
 
     </body>
 

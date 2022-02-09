@@ -1,0 +1,209 @@
+#projet4 {
+
+    background-color: rgba(139, 126, 100, 0.3);
+    padding-bottom: 70px;
+
+    .accueil {
+        background-image: url("../../../images/dauphin.jpeg");
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        height: 100vh;
+        width: 100%;
+    
+        .boite {
+            background-color: rgb(238, 155, 155);
+            border: solid saddlebrown 5px;
+            border-radius: 5px;
+            height: 100px;
+            width: 195px;
+            position: absolute;
+            padding: 20px;
+            top: 60%;
+            left: 42%;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+    
+            &:hover {
+                background-color: lightcoral;
+            }
+            
+            p {
+                color: mediumvioletred;
+                font-size: 20px;
+                margin: 0px;
+                text-align: center;
+            }
+        }
+    }
+    
+    .musique {
+        height: 130vh;
+    
+        .bt-retour {
+            background-color: rgb(238, 155, 155);
+            border: solid saddlebrown 5px;
+            border-radius: 5px;
+            height: 60px;
+            width: 150px;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+    
+            &:hover {
+                background-color: lightcoral;
+            }
+    
+            p {
+                margin: 0px;
+                color: mediumvioletred;
+                font-size: 20px;
+            }
+        }
+    
+        .bt-retour1{
+            position: relative;
+            top: -20px;
+            left: 3px;
+        }
+    
+        .bt-retour2 {
+            position: relative;
+            top: 9px;
+            left: 0px;
+        }
+    
+        .conteneur {
+        
+            position: relative;
+            left: 0px;
+            top: 0px;
+            width: 100%;
+            border: solid saddlebrown 10px;
+            border-radius: 10px;
+            
+            header {
+                background-image: url("../../../images/dauphin.jpeg");
+                background-size: 100%;
+                background-position: center;
+                background-repeat: no-repeat;
+                width: 100%;
+                height: 120px;
+                display: flex;
+                justify-content: flex-end;
+                align-items: center;
+                border-bottom: solid saddlebrown 5px;
+                
+                ::placeholder {
+                    color: rgb(37, 11, 78);
+                    
+                }
+                input {
+                    background-color: lightpink;
+                    margin-right: 20px;
+                    height: 30px;
+                    text-align: center;
+                    width: 250px;
+                }
+            }
+        
+            .list {
+                height: 400px;
+                overflow: auto;
+                background-color: rgb(245, 199, 206);
+        
+                #choix_musique {
+                    background-color: rgb(245, 199, 206);
+                    display: flex;
+                    padding: 20px;
+                    border: solid lightcoral 2.5px;
+        
+                    &:hover {
+                        background-color: lightcoral;
+                        cursor: pointer;
+                    }
+                    
+                    .bloc1,.bloc2,.bloc3 {
+                        flex: 1;
+                        text-align: center;
+                    }
+                }
+                #nom {
+                    background-color: lightcoral;
+                    display: flex;
+                    padding: 20px;
+                    border-bottom: solid saddlebrown 2.5px;
+                    font-weight: bold;
+                    text-transform: uppercase;
+    
+                    .bloc1,.bloc2, .bloc3 {
+                        flex: 1;
+                        text-align: center;
+                    }
+                }
+            }
+            
+            footer {
+                align-items: center;
+                border-top: solid saddlebrown 5px;
+                background-color: lightcoral;
+                display: flex;
+                justify-content: space-around;
+                flex-wrap: wrap;
+                height: 175px;
+                width: 100%;
+
+                input {
+                    border-radius: 10px;
+                }
+        
+                img {
+                    width: 100px;
+                    height: 100px;
+                    object-fit: contain;
+                    object-position: center center;
+                    margin-left: auto;
+                    margin-right: auto;
+                    display: block;
+                }
+        
+                .volume_texte {
+                    text-align: center;
+                }
+            }
+            .tags{
+                margin: 0px;
+                padding: 20px;
+                background-color: lightcoral;
+                display: flex;
+                justify-content: space-around;
+                flex-wrap: wrap;
+                border-top: solid saddlebrown 2.5px;
+    
+                .les_tags {
+                    margin-top: 5px;
+                    padding: 10px;
+                    border: solid saddlebrown 2.5px;
+                    cursor: pointer;
+    
+                    &:hover {
+                        color: whitesmoke;
+                        background-color: saddlebrown;
+                    }  
+                }
+                .effacer_tag{
+                    background-color: rgb(248, 62, 62);
+                }
+    
+                
+            }
+        }
+        
+    }
+    
+    
+}

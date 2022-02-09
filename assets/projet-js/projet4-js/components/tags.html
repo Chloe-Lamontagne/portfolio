@@ -1,0 +1,7 @@
+
+<div class="tags">
+    <div class="les_tags" v-for="tag of tags" @click="$root.change_recherche(tag)">
+        {{tag}}
+    </div>
+    <div class="les_tags effacer_tag" @click="$root.change_recherche('')">Effacer le tag</div>
+</div>

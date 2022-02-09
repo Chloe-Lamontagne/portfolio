@@ -1,0 +1,24 @@
+
+<footer>
+    <div class="choix">
+        <img :src="image">
+        <p>Titre : {{titre}}</p>
+    </div>
+    <div class="jouer">
+        {{ temps_actuel }} sec
+        <input type="range" min="0" :max="temps" step="2" v-model="temps_actuel">
+        <!-- {{pourcentage_temps_musique}}% -->
+        <div @click="musique_play" v-if=" est_en_train_de_jouer == false">
+            <img src="images/play.png">
+        </div>
+        <div @click="musique_pause" v-if=" est_en_train_de_jouer == true">
+            <img src="images/pause.png">
+        </div>
+    </div>
+    <div class="barre_volume">
+        <input type="range" min="0" max="1" step="0.02" v-model="mon_volume" @change="changer_volume">
+        <div class="volume_texte">
+            Volume : {{volume_pourcentage}} %
+        </div>
+    </div>
+</footer>

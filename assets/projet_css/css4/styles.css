@@ -1,0 +1,254 @@
+#projet4 {
+  background-color: rgba(139, 126, 100, 0.3);
+  padding-bottom: 70px;
+}
+
+#projet4 .accueil {
+  background-image: url("../../../images/dauphin.jpeg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 100vh;
+  width: 100%;
+}
+
+#projet4 .accueil .boite {
+  background-color: #ee9b9b;
+  border: solid saddlebrown 5px;
+  border-radius: 5px;
+  height: 100px;
+  width: 195px;
+  position: absolute;
+  padding: 20px;
+  top: 60%;
+  left: 42%;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
+}
+
+#projet4 .accueil .boite:hover {
+  background-color: lightcoral;
+}
+
+#projet4 .accueil .boite p {
+  color: mediumvioletred;
+  font-size: 20px;
+  margin: 0px;
+  text-align: center;
+}
+
+#projet4 .musique {
+  height: 130vh;
+}
+
+#projet4 .musique .bt-retour {
+  background-color: #ee9b9b;
+  border: solid saddlebrown 5px;
+  border-radius: 5px;
+  height: 60px;
+  width: 150px;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  cursor: pointer;
+}
+
+#projet4 .musique .bt-retour:hover {
+  background-color: lightcoral;
+}
+
+#projet4 .musique .bt-retour p {
+  margin: 0px;
+  color: mediumvioletred;
+  font-size: 20px;
+}
+
+#projet4 .musique .bt-retour1 {
+  position: relative;
+  top: -20px;
+  left: 3px;
+}
+
+#projet4 .musique .bt-retour2 {
+  position: relative;
+  top: 9px;
+  left: 0px;
+}
+
+#projet4 .musique .conteneur {
+  position: relative;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  border: solid saddlebrown 10px;
+  border-radius: 10px;
+}
+
+#projet4 .musique .conteneur header {
+  background-image: url("../../../images/dauphin.jpeg");
+  background-size: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 120px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-bottom: solid saddlebrown 5px;
+}
+
+#projet4 .musique .conteneur header ::-webkit-input-placeholder {
+  color: #250b4e;
+}
+
+#projet4 .musique .conteneur header :-ms-input-placeholder {
+  color: #250b4e;
+}
+
+#projet4 .musique .conteneur header ::-ms-input-placeholder {
+  color: #250b4e;
+}
+
+#projet4 .musique .conteneur header ::placeholder {
+  color: #250b4e;
+}
+
+#projet4 .musique .conteneur header input {
+  background-color: lightpink;
+  margin-right: 20px;
+  height: 30px;
+  text-align: center;
+  width: 250px;
+}
+
+#projet4 .musique .conteneur .list {
+  height: 400px;
+  overflow: auto;
+  background-color: #f5c7ce;
+}
+
+#projet4 .musique .conteneur .list #choix_musique {
+  background-color: #f5c7ce;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 20px;
+  border: solid lightcoral 2.5px;
+}
+
+#projet4 .musique .conteneur .list #choix_musique:hover {
+  background-color: lightcoral;
+  cursor: pointer;
+}
+
+#projet4 .musique .conteneur .list #choix_musique .bloc1, #projet4 .musique .conteneur .list #choix_musique .bloc2, #projet4 .musique .conteneur .list #choix_musique .bloc3 {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  text-align: center;
+}
+
+#projet4 .musique .conteneur .list #nom {
+  background-color: lightcoral;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 20px;
+  border-bottom: solid saddlebrown 2.5px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+#projet4 .musique .conteneur .list #nom .bloc1, #projet4 .musique .conteneur .list #nom .bloc2, #projet4 .musique .conteneur .list #nom .bloc3 {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  text-align: center;
+}
+
+#projet4 .musique .conteneur footer {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-top: solid saddlebrown 5px;
+  background-color: lightcoral;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  height: 175px;
+  width: 100%;
+}
+
+#projet4 .musique .conteneur footer input {
+  border-radius: 10px;
+}
+
+#projet4 .musique .conteneur footer img {
+  width: 100px;
+  height: 100px;
+  -o-object-fit: contain;
+     object-fit: contain;
+  -o-object-position: center center;
+     object-position: center center;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
+#projet4 .musique .conteneur footer .volume_texte {
+  text-align: center;
+}
+
+#projet4 .musique .conteneur .tags {
+  margin: 0px;
+  padding: 20px;
+  background-color: lightcoral;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  border-top: solid saddlebrown 2.5px;
+}
+
+#projet4 .musique .conteneur .tags .les_tags {
+  margin-top: 5px;
+  padding: 10px;
+  border: solid saddlebrown 2.5px;
+  cursor: pointer;
+}
+
+#projet4 .musique .conteneur .tags .les_tags:hover {
+  color: whitesmoke;
+  background-color: saddlebrown;
+}
+
+#projet4 .musique .conteneur .tags .effacer_tag {
+  background-color: #f83e3e;
+}
+/*# sourceMappingURL=styles.css.map */
