@@ -9,6 +9,26 @@
 	margin-bottom: 50px;
 }
 
+.section-pale{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	flex-direction: column;
+	background-color: rgba(139, 126, 100, 0.3);
+}
+
+.section-pale p{
+	text-align: center;
+}
+
+#voir_cv {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+}
+
 
 /*
 	Portfolio - Chloé Lamontagne

@@ -780,7 +780,7 @@ body.is-preload #intro:not(.hidden) + #header + #nav {
     overflow: hidden;
     position: relative;
     top: 80px;
-    width: 495px;
+    width: 630px;
     max-width: 72rem;
     z-index: 2;
 }
