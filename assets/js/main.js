@@ -4,6 +4,47 @@
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 */
 
+// CODE DE CHLOÉ
+
+if (document.querySelector(".nav_index")){
+
+	window.onscroll = function() {myFunction()};
+
+	var nav = document.querySelector(".nav_index");
+
+	var sticky = nav.offsetTop;
+	
+	function myFunction() {
+	  if (window.pageYOffset >= sticky) {
+		nav.style.position = "sticky"
+		nav.style.top = "0"
+		nav.style.zIndex = "100"
+	  } else {
+		nav.style.position = "relative"
+		nav.style.top = "38.8rem"
+	  }
+	}
+} else {
+	window.onscroll = function() {myFunction()};
+
+	var nav = document.querySelector(".nav_autre");
+	var sticky = nav.offsetTop;
+	
+	function myFunction() {
+	  if (window.pageYOffset >= sticky) {
+		nav.style.position = "sticky"
+		nav.style.top = "0"
+		nav.style.zIndex = "100"
+	  } else {
+		nav.style.position = "relative"
+		nav.style.top = "20rem"
+	  }
+	}
+}
+
+
+// FIN DU CODE DE CHLOÉ
+
 (function($) {
 
 	var	$window = $(window),
