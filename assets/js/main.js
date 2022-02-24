@@ -21,7 +21,7 @@ if (document.querySelector(".nav_index")){
 		nav.style.zIndex = "100"
 	  } else {
 		nav.style.position = "relative"
-		nav.style.top = "38.8rem"
+		nav.style.top = "100vh"
 	  }
 	}
 } else {
