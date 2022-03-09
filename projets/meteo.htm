@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projet - Météo</title>
+    <link rel="stylesheet" href="../assets/projet_css/css-meteo/style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@1,500&family=Merriweather:wght@300&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Nav -->
+    <nav id="nav">
+        <ul class="links">
+            <li><a href="../index.html">Accueil</a></li>
+            <li><a href="../travaux.html">Mes travaux</a></li>
+            <li><a href="../infos.html">À propos</a></li>
+            <li><a href="../outils.html">Mes Outils</a></li>
+        </ul>
+    </nav>
+
+    <div id="app">
+
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/XIhEPwTMjWk?controls=0&autoplay=1&loop=1&showinfo=0&mute=1&autohide=1&rel=0"></iframe>
+
+        <div class="conteneur">
+
+            <div class="infos" v-show="envoye == 1">
+
+                <!-- Ajouter bouton retour -->
+                <div class="position">
+                    <div class="gauche">
+                        <button><a href="#js" @click.prevent="retour">Retour</a></button>                    
+                    </div>
+                    <div class="centre">
+                        <h1>Météo</h1>
+                    </div>
+                    <div class="droit"></div>
+                </div>
+                
+                <h2>{{ ville }}({{ pay.toUpperCase() }})</h2>
+                
+                <!-- Plusieurs image ??? -->
+                <div class="temperature">
+                    <div class="gauche">
+                        <img :src="image">
+                    </div>
+                    <div class="droit">
+                        <h3>{{ temperature }}°C</h3>
+                        <p>{{ temperature_ressenti }}°C ressenti</p>
+                    </div>
+                </div>
+                <div class="conditions">
+                    <p><span>Condition:</span> </p>
+                    <div v-for="condition of conditions">                        
+                        <p class="lettre_majuscule"> {{ condition.description }}</p>
+                    </div>
+                </div>
+
+                <p><span>Vent:</span> {{ vitesse_vent }}km/h du {{ dirrection_vent }}</p>
+                
+                <p><span>Levé du soleil:</span> {{ leve_soleil }}</p>
+                <p><span>Couché du soleil:</span> {{ couche_soleil }}</p>
+                <p><span>Fuseau horaire: </span>{{ fuseau_horaire }}h</p>
+
+
+            </div>
+
+
+            <!-- Ajouter message d'erreur si on ne trouve rien  -->
+            <div class="formulaire" v-show="envoye == null">
+                <h1>Météo</h1>
+                <form @submit.prevent="soumettre" action="#js" >
+                    <div class="top">
+                        <input type="text" name="ville" placeholder="Ville" v-model="ville">
+                        <input type="text" name="pay" placeholder="ex: CA" v-model="pay">
+                    </div>
+                    <div class="bottom">
+                        <input type="submit" name="submit" value="Voir les infos">
+                    </div>
+                </form>
+            </div>
+
+
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/vue@next"></script>
+    <script src="../assets/projet-js/meteo-js/main.js" type="module"></script>
+</body>
+</html>
