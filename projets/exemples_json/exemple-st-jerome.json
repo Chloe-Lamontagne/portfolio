@@ -1,0 +1,47 @@
+{
+  "coord": {
+    "lon": -74.0132,
+    "lat": 45.7754
+  },
+  "weather": [
+    {
+      "id": 602,
+      "main": "Snow",
+      "description": "fortes chutes de neige",
+      "icon": "13d"
+    }
+  ],
+  "base": "stations",
+  "main": {
+    "temp": -14.72,
+    "feels_like": -21.35,
+    "temp_min": -15.56,
+    "temp_max": -13.16,
+    "pressure": 1023,
+    "humidity": 86
+  },
+  "visibility": 402,
+  "wind": {
+    "speed": 3.13,
+    "deg": 40,
+    "gust": 7.6
+  },
+  "snow": {
+    "1h": 0.35
+  },
+  "clouds": {
+    "all": 100
+  },
+  "dt": 1645802963,
+  "sys": {
+    "type": 2,
+    "id": 2000258,
+    "country": "CA",
+    "sunrise": 1645789320,
+    "sunset": 1645828594
+  },
+  "timezone": -18000,
+  "id": 6138501,
+  "name": "Saint-Jérôme",
+  "cod": 200
+}

@@ -3,7 +3,7 @@
 const app = {
     data(){
         return {
-            envoye: null,
+            envoye: false,
             ville: "",
             pay: "",
 
@@ -15,6 +15,11 @@ const app = {
             temperature: "",
             temperature_ressenti: "",
             conditions: [],
+
+            pluie: "",
+            quantite_pluie: "test",
+            neige:"",
+            quantite_neige:"",
 
             vitesse_vent:"",
             dirrection_vent: "",
@@ -33,7 +38,7 @@ const app = {
         soumettre(){
 
             if(this.ville != "" & this.pay != ""){
-                this.envoye = 1
+                this.envoye = true
                 const url_lat_lon = "http://api.openweathermap.org/geo/1.0/direct?q="+ this.ville +","+ this.pay +"&limit=1&appid=bab0b4b05686341158d1b4a7c3b6df1d"
     
                 fetch(url_lat_lon).then(resp => resp.json()).then(data => {
@@ -49,6 +54,9 @@ const app = {
 
             const weather = "http://api.openweathermap.org/data/2.5/weather?lat="+ this.latitude +"&lon="+ this.longitude +"&appid=bab0b4b05686341158d1b4a7c3b6df1d&lang=fr&units=metric"
 
+            // const test_st_jerome = "exemples_json/exemple-st-jerome.json"
+            // const test_new_york = "exemples_json/exemple-new-york.json"
+
             fetch(weather).then(resp => resp.json()).then(data => {
                 
                 this.temperature = data.main.temp
@@ -57,6 +65,16 @@ const app = {
                 this.conditions = data.weather
                 const icone = data.weather[0].icon
                 this.image = "http://openweathermap.org/img/wn/"+ icone +"@2x.png"
+
+                if(data.rain){
+                    this.pluie = true
+                    this.quantite_pluie = data.rain["1h"]
+                } 
+
+                if(data.snow){
+                    this.neige = true
+                    this.quantite_neige = data.snow["1h"]
+                } 
                 
                 this.vitesse_vent = data.wind.speed
                 const degre = data.wind.deg
@@ -106,7 +124,7 @@ const app = {
                          : "Nord-Ouest";
         },
         retour(){
-            this.envoye = null
+            this.envoye = false
         }
     }
 }
