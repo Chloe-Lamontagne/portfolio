@@ -17,7 +17,7 @@ const app = {
             conditions: [],
 
             pluie: "",
-            quantite_pluie: "test",
+            quantite_pluie: "",
             neige:"",
             quantite_neige:"",
 
