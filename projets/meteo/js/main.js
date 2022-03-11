@@ -88,7 +88,6 @@ const app = {
                 // 60 x 60 = 3600
                 this.fuseau_horaire = data.timezone/3600
 
-                console.log(data.weather)
                 
             })
         },
