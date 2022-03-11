@@ -39,7 +39,7 @@ const app = {
 
             if(this.ville != "" & this.pay != ""){
                 this.envoye = true
-                const url_lat_lon = "http://api.openweathermap.org/geo/1.0/direct?q="+ this.ville +","+ this.pay +"&limit=1&appid=bab0b4b05686341158d1b4a7c3b6df1d"
+                const url_lat_lon = "https://api.openweathermap.org/geo/1.0/direct?q="+ this.ville +","+ this.pay +"&limit=1&appid=bab0b4b05686341158d1b4a7c3b6df1d"
     
                 fetch(url_lat_lon).then(resp => resp.json()).then(data => {
                     this.latitude = data[0].lat
@@ -52,7 +52,7 @@ const app = {
 
         meteo(){
 
-            const weather = "http://api.openweathermap.org/data/2.5/weather?lat="+ this.latitude +"&lon="+ this.longitude +"&appid=bab0b4b05686341158d1b4a7c3b6df1d&lang=fr&units=metric"
+            const weather = "https://api.openweathermap.org/data/2.5/weather?lat="+ this.latitude +"&lon="+ this.longitude +"&appid=bab0b4b05686341158d1b4a7c3b6df1d&lang=fr&units=metric"
 
             // const test_st_jerome = "exemples_json/exemple-st-jerome.json"
             // const test_new_york = "exemples_json/exemple-new-york.json"
@@ -64,7 +64,7 @@ const app = {
                 
                 this.conditions = data.weather
                 const icone = data.weather[0].icon
-                this.image = "http://openweathermap.org/img/wn/"+ icone +"@2x.png"
+                this.image = "https://openweathermap.org/img/wn/"+ icone +"@2x.png"
 
                 if(data.rain){
                     this.pluie = true
