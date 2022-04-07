@@ -76,7 +76,7 @@ const app = {
                     this.quantite_neige = data.snow["1h"]
                 } 
                 
-                this.vitesse_vent = data.wind.speed
+                this.vitesse_vent = this.convertKmH(data.wind.speed) 
                 const degre = data.wind.deg
                 this.dirrection_vent = this.convertDegreToCardinal(degre)
                 
@@ -124,6 +124,10 @@ const app = {
         },
         retour(){
             this.envoye = false
+        },
+        convertKmH(metre_seconde){
+            let kilometre_heure = metre_seconde*3.6
+            return Math.round (kilometre_heure)
         }
     }
 }
